@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/Login/login",
+    "pages/sHome/s-home",
+    "pages/sHome/Progress/progress",
+    "pages/sHome/Repair/repair",
+    "pages/sStory/s-story",
+    "pages/Student/student"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3A63BD"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/sHome/s-home",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-c.png"
+      },
+      {
+        "pagePath": "pages/sStory/s-story",
+        "text": "历史",
+        "iconPath": "icons/clock.png",
+        "selectedIconPath": "icons/clock-c.png"
+      },
+      {
+        "pagePath": "pages/Student/student",
+        "text": "我的",
+        "iconPath": "icons/account.png",
+        "selectedIconPath": "icons/account-c.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-card": "/miniprogram_npm/lin-ui/card/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index",
+    "l-avatar": "/miniprogram_npm/lin-ui/avatar/index",
+    "l-step": "/miniprogram_npm/lin-ui/step/index",
+    "l-steps": "/miniprogram_npm/lin-ui/steps/index",
+    "l-textarea": "/miniprogram_npm/lin-ui/textarea/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-form": "/miniprogram_npm/lin-ui/form/index",
+    "l-form-item": "/miniprogram_npm/lin-ui/form-item/index",
+    "l-input": "/miniprogram_npm/lin-ui/input/index",
+    "l-image-picker": "/miniprogram_npm/lin-ui/image-picker/index"
+  }
+}

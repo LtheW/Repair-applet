@@ -1,0 +1,31 @@
+<view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <view class="boxcard1" bindtap='bindtap'>
+  <l-card l-img-class="cardimage" l-class="card" type="primary"
+            image="/images/报修.png"
+            title="我要报修">
+        <!-- 此处为content -->
+        <view class="content">
+        针对平时使用网络出现的问题进行反馈，并提交报修
+        </view>
+    </l-card>
+  </view>
+
+  <view class="boxcard2" bindtap='bindtap1'>
+    <l-card l-img-class="cardimage" l-class="card" type="primary"
+            image="/images/报修1.png"
+            title="查看维修进度">
+        <!-- 此处为content -->
+        <view class="content">
+        点击查看订单的报修进度
+        </view>
+    </l-card>
+  </view>
+</view>
