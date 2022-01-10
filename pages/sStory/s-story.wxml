@@ -1,0 +1,59 @@
+<l-card type="primary" l-class="card" plaintext="{{true}}">
+        <!-- 此处为content -->
+        <view class="avter-container">
+        <view>2021年1月22日</view>
+        <view class="number">周五 12:00</view>
+        <view class="number1">待评价</view>
+        </view>
+        <view class="line"></view>
+        <view class="avter-content">
+        问题：很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...
+        </view>
+        
+        <view class="container1">
+         <view class="avter-content">
+        进度：维修成功
+        </view>
+           <l-button size="mini">前往评价</l-button>
+        </view>
+  </l-card>
+
+  <l-card type="primary" l-class="card" plaintext="{{true}}">
+        <!-- 此处为content -->
+        <view class="avter-container">
+        <view>2021年1月22日</view>
+        <view class="number">周五 12:00</view>
+        <view class="number1">待评价</view>
+        </view>
+        <view class="line"></view>
+        <view class="avter-content">
+        问题：很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...
+        </view>
+        
+        <view class="container1">
+         <view class="avter-content">
+        进度：维修成功
+        </view>
+           <l-button size="mini">前往评价</l-button>
+        </view>
+  </l-card>
+
+  <l-card type="primary" l-class="card" plaintext="{{true}}">
+        <!-- 此处为content -->
+        <view class="avter-container">
+        <view>2021年1月22日</view>
+        <view class="number">周五 12:00</view>
+        <view class="number1">待评价</view>
+        </view>
+        <view class="line"></view>
+        <view class="avter-content">
+        问题：很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...
+        </view>
+        
+        <view class="container1">
+         <view class="avter-content">
+        进度：维修成功
+        </view>
+           <l-button size="mini">前往评价</l-button>
+        </view>
+  </l-card>

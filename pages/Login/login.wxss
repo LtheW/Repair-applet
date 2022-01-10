@@ -1,0 +1,4 @@
+/* pages/index/index.wxss */
+.butons{
+  padding-top: 50rpx;
+}
