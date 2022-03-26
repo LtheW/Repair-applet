@@ -1,34 +1,45 @@
-<l-form name="student" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit">
-    <l-form-item label="宿舍:" name="studentName">
-        <l-input id="studentName" value="{{student.dorm}}" hide-label show-row="{{false}}" />
-    </l-form-item>
+<view class='container'>
+<content-card class="content" name="网络报修">
+   
+        <l-form name="student" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit">
+            <l-form-item label="宿舍:" name="studentName">
+                <l-input id="studentName" bind:lininput="inputAddress" value="{{dorm}}" hide-label show-row="{{false}}" />
+            </l-form-item>
 
-    <l-form-item label="联系方式:" name="studentAge">
-        <l-input id="studentAge" value="{{student.telephone}}" hide-label show-row="{{false}}" />
-    </l-form-item>
+            <l-form-item label="联系方式:" name="studentAge">
+                <l-input id="studentAge" bind:lininput="inputTelephone"value="{{telephone}}" hide-label show-row="{{false}}" />
+            </l-form-item>
 
-    <l-form-item l-form-item-class="item2" label="预约上门时间:"  name="studentTime" label-placement="column">
-        <view class="timecontainer">
-            选择具体上门时间
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-                <view class="time">
-                    {{array[index]}}
+            <view class="item2">
+                <label>预约上门时间:</label>
+                <view class="timecontainer">
+                    选择具体上门时间
+                    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                        <view class="time">
+                            {{array[index]}}
+                        </view>
+                    </picker>
                 </view>
-            </picker>
-        </view>
-    </l-form-item>
+            </view>
 
-    <l-form-item l-form-item-class="item" label="情况描述:" name="studentText" label-placement="column" >
-        <l-textarea id="studentText" l-class="item1" placeholder="说说你的想法吧..."  />
-    </l-form-item>
+            <l-form-item l-form-item-class="item" label="情况描述:" name="studentText" label-placement="column">
+                <l-textarea id="studentText" bind:lininput="inputDescripe" l-class="item1" placeholder="说说你的想法吧..." value="{{describe}}" />
+            </l-form-item>
 
-    <l-form-item l-form-item-class="item" label="添加图片:" name="studentPicture" label-placement="column">
-    <l-image-picker l-class="item1" id="studentPicture" count="9" bind:linchange="onChangeTap" />
-    </l-form-item>
-    <view slot="submit">
-        <l-button>提交</l-button>
-    </view>
-    <view slot="reset">
-        <l-button type="default" plain>重置</l-button>
-    </view>
-</l-form>
+            <l-form-item l-form-item-class="item" label="添加图片:" name="studentPicture" label-placement="column">
+                <l-image-picker l-class="item1" id="studentPicture" count="3" size="3"bind:linchange="onChangeTap" />
+                
+            </l-form-item>
+            
+
+           
+            <!-- <div class="line_02"><span>s</span></div> -->
+            <view class="submit" slot="submit">
+                <l-button>提交</l-button>
+            </view>
+            <view class="submit" slot="reset">
+                <l-button type="default"  plain>重置</l-button>
+            </view>
+        </l-form>
+</content-card>
+</view>

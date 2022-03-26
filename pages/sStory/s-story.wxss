@@ -83,14 +83,18 @@
   margin-left: 300rpx;
 }
 .number{
+  width: 200rpx;
   color: #666;
   font-size: 24rpx;
-  margin-left: 12rpx;
+  margin-left: 20rpx;
 }
 .number1{
   color: #666;
   font-size: 24rpx;
-  margin-left: 200rpx;
+  margin-left: 50rpx;
+}
+.date{
+  width: 260rpx;
 }
 
 .line{

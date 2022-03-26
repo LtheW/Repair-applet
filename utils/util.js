@@ -1,19 +1,67 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
+function formatTime(date) {
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return year+'年'+month+'月'+day+'日' + ' ' + [hour, minute, second].map(formatNumber).join('-')
 }
 
-const formatNumber = n => {
+function TimeData(date) {
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  if(month<10){
+    return year+'0'+month+''+day+''+ [hour, minute].map(formatNumber).join('')
+  }
+  else{
+    return year+''+month+''+day+''+ [hour, minute].map(formatNumber).join('')
+  }
+    
+}
+
+function getYear(date){
+  var year = date.getFullYear()
+  return year;
+}
+
+
+function formatNumber(n) {
   n = n.toString()
-  return n[1] ? n : `0${n}`
+  return n[1] ? n : '0' + n
+}
+function formatTimeTwo(number, format) {
+  var formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
+  var returnArr = [];
+  var date = new Date(number * 1000);
+  returnArr.push(date.getFullYear());
+  returnArr.push(formatNumber(date.getMonth() + 1));
+  returnArr.push(formatNumber(date.getDate()));
+  returnArr.push(formatNumber(date.getHours()));
+  returnArr.push(formatNumber(date.getMinutes()));
+  returnArr.push(formatNumber(date.getSeconds()));
+  for (var i in returnArr) {
+    format = format.replace(formateArr[i], returnArr[i]);
+  }
+  return format;
+}
+
+const getWeekByDate = dates => {
+  let show_day = new Array('7', '1', '2', '3', '4', '5', '6');
+  let date = new Date(dates);
+  date.setDate(date.getDate());
+  let day = date.getDay();
+  return show_day[day];
 }
 
 module.exports = {
-  formatTime
+  formatTime: formatTime,
+  TimeData:TimeData,
+  formatTimeTwo: formatTimeTwo,
+  getWeekByDate: getWeekByDate,
+  getYear:getYear
 }

@@ -1,15 +1,16 @@
 <!--pages/index/index.wxml-->
 <view class="container">
-<view>IHBUT网络报修</view>
+<view class="title">IHBUT网络报修</view>
 <image src="/images/背景.png"></image>
-<view class="butons">
-<l-button width="500" height="100" shape="semicircle" bind:lintap="tap">学生登录</l-button>
-</view>
-<view class="butons">
-<l-button width="500" height="100" shape="semicircle">维修人员登录</l-button>
-</view>
-<view class="butons">
-<l-button width="500" height="100" shape="semicircle">游客登录</l-button>
+<view class="login-container">
+  <view class="login-box">
+    <view class="login-message">{{message}}</view>
+    <label>学号</label>
+    <input bindinput="bindInput" placeholder="{{studentInfo}}"/>
+    <label>密码</label>
+    <input bindinput="bindInput1" placeholder="{{passWord}}"/>
+    <l-button l-class="login-btn" bind:lintap='Login'>立即登录</l-button>
+  </view>
 </view>
 
 </view>

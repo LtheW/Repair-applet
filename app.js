@@ -14,6 +14,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    url:'https://cn-cd-dx-6.natfrp.cloud:41348/',
+    userInfo: null,
+    studentInfo:1911111111
   }
 })

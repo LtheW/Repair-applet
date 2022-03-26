@@ -1,0 +1,10 @@
+<!--pages/developmentTeam.wxml-->
+<view>
+  <l-card l-class="card1" l-img-class="imgcard1" type="primary" image="/images/欧阳烽.png" title="欧阳烽">
+    <view class="ou-container">
+      <view class="ou-content1">前端工程师</view>
+      <view class="ou-content2">不要做一个看起来努力的人</view>
+      <view class="ou-content3">1762568530@qq.com</view>
+    </view>
+  </l-card>
+</view>

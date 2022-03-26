@@ -1,0 +1,32 @@
+/* pages/developmentTeam.wxss */
+.card1{
+  margin-top: 20rpx !important;
+  border-radius: 20rpx !important;
+  color: rgb(255,255,255);
+}
+.imgcard1{
+  height: 200rpx !important;
+  width:  200rpx !important;
+  border-radius: 50% ;
+}
+.ou-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+.ou-content1{
+  margin-top: 0rpx;
+  font-size: 26rpx;
+  color:rgb(171,171,171);
+}
+.ou-content2{
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #000;
+}
+.ou-content3{
+  margin-top: 100rpx;
+  font-size: 26rpx;
+  color: rgb(171,171,171);
+}

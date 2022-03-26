@@ -1,15 +1,37 @@
-<l-steps active-index="1" direction="column" step-min-height="160">
-  <l-step title="管理员正在派单" describe="11:30"></l-step>
-  <l-step title="维修人员正在赶来的路上" describe="11:30"></l-step>
-  <l-step title="维修完成" describe="11:30"></l-step>
-  <l-step title="您的申请被退回" describe="11:30"></l-step>
-</l-steps>
+<!--pages/form/pages/rules/index.wxml-->
+<view class='container'>
+  <content-card class="content" name="工单详情">
+    <view class='buttun-wrapper'>
+      <form>
+        <l-input label="宿舍" label-width="170" disabled="true" value="{{form.address}}" />
+        <l-input label="联系方式" label-width="170" disabled="true" value="{{form.contactInformation}}" />
+        <l-input label="预约上门时间" label-width="250" disabled="true" value="{{form.fixedTime}}" />
 
-<l-card type="primary"
-          plaintext="{{true}}"
-          title="详情：">
-    <view class="content">
-      大雄要死掉了,他对妻子说:我死之后你找一个男人我就在地下打一一个滚。
-      说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
+        <text class="text-desc">情况描述</text>
+        <l-textarea l-class="textarea-class" value="{{form.workorderContent}}" />
+        <text class="text-desc">相关图片</text>
+        <l-album max-number='{{4}}' urls='{{urls}}' custom-row-number='{{true}}' everyRowNumber="4" preview-full-image='{{true}}'></l-album>
+        <l-steps active-index="{{workOrderState}}" direction="column" step-min-height="160">
+        </l-steps>
+      </form>
+      <view class="steps">
+      <text class="text-desc">报修进度</text>
     </view>
-  </l-card>
+      <view class="steps">
+        <l-steps active-index="{{workOrderState}}" direction="row" step-min-height="160">
+          <l-step title="管理员正在派单"></l-step>
+          <l-step title="维修人员正在赶来的路上"></l-step>
+          <l-step title="维修完成"></l-step>
+        </l-steps>
+      </view>
+      <view class="steps">
+      <l-card type="primary" plaintext="{{true}}" title="评价：">
+        <view class="content">
+          {{form.evaluationStatus}}
+        </view>
+      </l-card>
+    </view>
+    </view>
+  </content-card>
+</view>
+

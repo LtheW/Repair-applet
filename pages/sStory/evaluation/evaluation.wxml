@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view>
+  <view class="header-container">
+    <view style="font-size: 80rpx;font-weight: 1;color:rgb(99,123,116);">您的评价</view>
+  </view>
+  <view  class="card1">
+    <l-card l-img-class="cardimage"  l-class="card" type="primary"
+            image="/images/任务.png"
+            title="维修完成度">
+            <l-rate score="{{changeScore}}" inActive-color="rgb(180,230,216)" active-color="rgb(59,177,155)" size="56" bind:linchange="changeScore"></l-rate>
+            <!--<l-input l-class="input1"  hide-label="{{true}}" type="text"></l-input>-->
+    </l-card>
+  </view>
+  <view  class="card2">
+    <l-card l-img-class="cardimage"  l-class="card" type="primary"
+            image="/images/时钟.png"
+            title="评价此次订单">
+            <l-textarea placeholder="说说你的看法" value="{{yourview}}" bind:lininput="writeView"></l-textarea>
+    </l-card> 
+  </view>
+  <view class="button-container">
+    <l-button shape="semicircle" l-class="button" size="large" bg-color="rgb(59,177,155)" bind:linsubmit="submit">
+    <image src='/images/完成.png' class="image"></image>
+    保存并提交评价
+  </l-button>
+  </view>
+</view>

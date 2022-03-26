@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lin-ui": "^0.9.7",
-    "taro-ui": "^2.3.4"
+    "lin-ui": "^0.9.7"
   }
 }
