@@ -1,0 +1,26 @@
+
+<view>
+ <l-card type="primary" class="card"
+          plaintext="{{true}}"
+          title="主要问题：">
+             <view class="content">
+              <l-textarea id="feedbackText" l-class="item" maxlength="140" placeholder="例：校园网连不上.."  />
+             </view>
+ </l-card>
+
+  <l-card type="primary" class="card"
+          plaintext="{{true}}"
+          title="未完成维修原因：">
+             <view class="content">
+                 <l-textarea id="feedbackText" l-class="item" maxlength="140" placeholder="多行输入.."  />
+            </view>
+  </l-card>
+
+  
+<view>
+  <l-button size= "long " bind:lintap='jumpPage1' plain>提交</l-button>
+     <!-- <l-button class="button" bg-color="#C9D2FF" shape="circle" size="medium">提交</l-button> -->
+ </view>
+
+</view>      
+

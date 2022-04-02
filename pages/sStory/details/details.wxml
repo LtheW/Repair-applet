@@ -1,0 +1,41 @@
+<!--pages/form/pages/rules/index.wxml-->
+<view class='container'>
+  <content-card class="content" name="工单详情">
+    <view class='buttun-wrapper'>
+      <form>
+        <l-input label="宿舍" label-width="170" disabled="true" value="{{form.address}}" />
+        <l-input label="联系方式" label-width="170" disabled="true" value="{{form.contactInformation}}" />
+        <l-input label="预约上门时间" label-width="250" disabled="true" value="{{form.fixedTime}}" />
+
+        <text class="text-desc">情况描述</text>
+        <l-textarea l-class="textarea-class" value="{{form.workorderContent}}" />
+        <text class="text-desc">相关图片</text>
+        <l-album max-number='{{4}}' urls='{{urls}}' custom-row-number='{{true}}' everyRowNumber="4" preview-full-image='{{true}}'></l-album>
+        <l-steps active-index="{{workOrderState}}" direction="column" step-min-height="160">
+        </l-steps>
+      </form>
+      <view class="steps">
+      <text class="text-desc">报修进度</text>
+    </view>
+      <view class="steps">
+        <l-steps active-index="{{workOrderState}}" direction="row" step-min-height="160">
+          <l-step title="管理员正在派单"></l-step>
+          <l-step title="维修人员正在赶来的路上"></l-step>
+          <l-step title="维修完成"></l-step>
+        </l-steps>
+      </view>
+      <view class="steps">
+      <l-card type="primary" plaintext="{{true}}" title="评价：">
+        <view class="content">
+          {{form.evaluation}}
+        </view>
+       
+      </l-card>
+      <view class="center"><l-button width="650" height="80"
+       type="success" bind:lintap="evaluation">立即评价</l-button></view>
+      
+    </view>
+    </view>
+  </content-card>
+</view>
+

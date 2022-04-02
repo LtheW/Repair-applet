@@ -1,0 +1,25 @@
+/* pages/Repair feedback 1/Repair feedback 1.wxss */
+page{
+    background-color:rgb(247, 245, 248);
+}
+.card {
+    margin: 40rpx 20rpx auto !important;
+    border-radius: 10rpx!important;
+      }
+
+ .add_btn{
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 130rpx;
+      }
+
+ .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100rpx;
+        background-color:#C9D2FF;
+        color:#0000 important;
+      }  
+

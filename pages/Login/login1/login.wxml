@@ -1,0 +1,101 @@
+<!-- <view class="container">
+  <view class="login-container">
+    <view class="login-box">
+      <view class="icon">
+        <image src="/images/it.png" style="width: 70rpx; height: 70rpx; display: block; box-sizing: border-box"></image>
+      </view>
+
+      <view class="title1">欢迎使用HBUT网络报修系统</view>
+
+    <label>学号</label>
+    <label>密码</label>
+    <l-button l-class="login-btn" bind:lintap='test'>立即登录</l-button>
+  </view>
+</view>
+</view> -->
+
+
+ <view class="container">
+ 
+  <image src="/images/背景.png" style="width: 500rpx; height: 500rpx; display: inline-block; box-sizing: border-box"></image>
+ </view>
+ <view class="login-container" style="width: 750rpx; height: 550rpx; display: block; box-sizing: border-box">
+  <view class="title1">欢迎使用</view>
+  <view class="title1">HBUT网络报修平台</view>
+  <view class="title-tips">提供网络相关问题的反馈途径</view>
+  <l-button l-class="login-btn" bind:lintap='test'>立即使用</l-button>
+ </view>
+ 
+
+<l-popup show="{{check}}" content-align="bottom">
+  <view class='login-form'>
+    <l-tabs l-class-header="tab" l-class-inactive="swipeable-class-inactive" l-class-line="line-class" l-class-active="swipeable-class-active" active-key="one" swipeable has-line="{{true}}" active-color="#002251" animated-for-line="{{true}}">
+      <l-tabpanel tab="学生" key="one" slot="one">
+        <view class="content">
+          <view class="title">
+            登录
+          </view>
+          <view class="title-tips">
+            嗨，你好！欢迎登录HBUT网络报修平台
+          </view>
+          <view class="form-item">
+            <view class="lable">
+              用户名/学号
+
+            </view>
+            <input  bindinput="bindInput" value="{{studentInfo}}" placeholder="请输入用户名/手机" placeholder-class="placeholder" />
+          </view>
+          <view class="form-item">
+            <view class="lable">
+              密码
+
+            </view>
+            <input type="password" value="{{passWord}}" bindinput="bindInput1" placeholder="请输入密码" placeholder-class="placeholder" />
+          </view>
+          <view class="forget-password">
+            忘记密码？
+          </view>
+          <l-button l-class="login-btn" bind:lintap='Login'>立即登录</l-button>
+
+
+        </view>
+      </l-tabpanel>
+      <l-tabpanel tab="维修人员" key="two" slot="two">
+
+        <view class="content">
+          <view class="title">
+            登录
+          </view>
+          <view class="title-tips">
+            嗨，你好！欢迎登录HBUT网络报修平台
+          </view>
+          <view class="form-item">
+            <view class="lable">
+              用户名/手机
+
+            </view>
+            <input bindinput="bindInput2" value="{{userinfo}}" placeholder="请输入用户名/手机" placeholder-class="placeholder" />
+          </view>
+          <view class="form-item">
+            <view class="lable">
+              密码
+
+            </view>
+            <input  type="password" value="{{passWord}}" bindinput="bindInput1" placeholder="请输入密码" placeholder-class="placeholder" />
+          </view>
+          <view class="forget-password">
+            忘记密码？
+          </view>
+          <l-button l-class="login-btn" bind:lintap='Login1'>立即登录</l-button>
+
+
+        </view>
+      </l-tabpanel>
+    </l-tabs>
+  </view>
+</l-popup>
+
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

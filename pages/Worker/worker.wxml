@@ -1,0 +1,31 @@
+<view>
+  <view class="header-container">
+    <view class="avatar-container">
+      <l-avatar src="/images/背景.png" size="180" />
+      <view style="margin-top: 10rpx; font-size: 48rpx">莫某某</view>
+    </view>
+    <view class="header-info-container">
+      <view class="item">
+        <text class="title">关注</text>
+        <text class="data">0</text>
+      </view>
+      <view class="item">
+        <text class="title">消息</text>
+        <text class="data">0</text>
+      </view>
+      <view class="item">
+        <text class="title">单位</text>
+        <text class="data">0</text>
+      </view>
+    </view>
+    <view class="list">
+      <view class="content">
+        <l-list title="个人信息" icon="yonghuxinxi" l-class-icon="iconfont" />
+        <l-list title="意见反馈" icon="fankui" l-class-icon="iconfont" />
+        <l-list title="关于" icon="xiangqing" l-class-icon="iconfont" />
+      </view>
+    </view>
+  </view>
+
+  <text style="position:relative;"></text>
+</view>

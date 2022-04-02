@@ -1,0 +1,9 @@
+<view class="container" style="width: 750rpx; height: 990rpx; display: flex; box-sizing: border-box">
+<view>
+      <l-avatar shape="square" src="/images/维修成功.png" size="780" />
+</view>
+<view class="butons" >
+<l-button width="500" height="100" shape="semicircle"  bind:lintap='jumpPage1'>返回</l-button>
+</view>
+</view>
+

@@ -1,0 +1,37 @@
+.swiper {
+    height: 400rpx;
+    width: 100%;
+  }
+  .swiper-image {
+    height: 100%;
+    width: 100%;
+  }
+  .slide-image{
+     height: 100%;
+    width: 100%;
+  }
+  .card{
+    height: 200rpx;
+    border-radius: 10rpx!important;
+  }
+  .cardimage{
+    height: 150rpx !important;
+    width: 150rpx !important;
+    
+  }
+  .boxcard1{
+    padding-top: 100rpx;
+  }
+  .boxcard2{
+    padding-top: 60rpx;
+  }
+  .content {
+    margin-top: 10rpx;
+    color: #666;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }

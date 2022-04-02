@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "l-button":"/miniprogram_npm/lin-ui/button/index"
+    },
+     "navigationBarBackgroundColor": "#3A63BD",
+     "navigationBarTitleText": "公告内容",
+     "navigationBarTextStyle": "black",
+     "backgroundTextStyle": "light"
+  }
