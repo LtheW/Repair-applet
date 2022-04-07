@@ -1,12 +1,26 @@
 {
   "pages": [
+    "pages/Login/login1/login",
+    "pages/wHome/w-home/w-home",
+    "pages/Login/login",
+    "pages/wHome/Repair feedback/Repair feedback",
+    "pages/wHome/success/success",
+    "pages/wHome/fail/fail",
+    "pages/wHome/TZ/tz",
+    "pages/wHome/Serve/Serve/serve",
+    "pages/wHome/Serve/XQ/xq",
+    "pages/wHome/History/PJ/pj",
+    "pages/wHome/History/history",
+    "pages/Worker/worker",
     "pages/sHome/s-home",
-    "pages/Login/login",    
+    "pages/sStory/evaluation/evaluation",
+    
     "pages/sHome/Progress/progress",
     "pages/sHome/Repair/repair",
     "pages/sStory/s-story",
     "pages/Student/student",
-    "pages/sStory/evaluation/evaluation"
+    "pages/sStory/details/details"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,6 +49,7 @@
         "selectedIconPath": "icons/account-c.png"
       }
     ]
+    
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -55,6 +70,10 @@
     "l-form-item": "/miniprogram_npm/lin-ui/form-item/index",
     "l-input": "/miniprogram_npm/lin-ui/input/index",
     "l-image-picker": "/miniprogram_npm/lin-ui/image-picker/index",
+    "l-popup":"/miniprogram_npm/lin-ui/popup/index",
+    "l-tabs":"/miniprogram_npm/lin-ui/tabs/index",
+    "l-tabpanel":"/miniprogram_npm/lin-ui/tabpanel/index",
+    "l-message":"/miniprogram_npm/lin-ui/message/index",
     "content-card": "/components/content-card/index",
     "content-title": "/components/content-title/index"
   }

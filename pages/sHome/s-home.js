@@ -1,22 +1,24 @@
 // pages/sHome/s-home.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
     imgUrls: [
-      '/images/轮播1.png',
-      '/images/轮播2.png',
-      '/images/轮播3.png'
+      'https://repair.woogugu.cn/images/Rotation1.png',
+      'https://repair.woogugu.cn/images/Rotation2.png',
+      'https://repair.woogugu.cn/images/Rotation3.png'
     ],
     indicatorDots: true,  //是否显示面板指示点
     autoplay: true,      //是否自动切换
     interval: 3000,       //自动切换时间间隔
     duration: 1000,       //滑动动画时长s
     inputShowed: false,
-    inputVal: ""
-
+    inputVal: "",
+    image:app.globalData.url
   },
   bindtap:function () {
     wx.navigateTo({

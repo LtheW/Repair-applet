@@ -1,11 +1,12 @@
 // index.js
 // 获取应用实例
-const app = getApp()
-
+const app=getApp();
 Page({
   data: {
-    changeScore: 0,
+    workorderNumber:"",
+    changeScore:0,
     yourview: "",
+    image:app.globalData.url
   },
   writeView: function (e) {
     this.setData({
@@ -17,57 +18,79 @@ Page({
       changeScore: e.detail.score
     })
   },
-  submit() {
+  test() {
+    var that=this;
+    var app = getApp();
     wx.request({
-      url: 'https://cn-zz-bgp-4.natfrp.cloud:58216/student/evaluate',
+      url: app.globalData.url+'student/evaluate',
+      data: {
+        student_number: app.globalData.studentInfo,
+        workorder_number: that.data.workorderNumber,
+        maintenance_satisfaction:that.data.changeScore,
+        evaluation:that.data.yourview
+      },
       header: {
-        "Content-Type": "multipart/form-data"
+        "Content-Type": "application/x-www-form-urlencoded"
       },
       method: "POST",
-      data: {
-        student_number: 1911111111,
-        workorder_number: 10,
-        maintenance_satisfaction:this.data.changeScore,
-        evaluation:this.data.yourview
-      },
       success:function(res){
         console.log(res);
+        wx.navigateBack();
       },
     })
   },
   // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  
+  onLoad:function(options) {
+   var that=this;
+   that.setData({
+    workorderNumber:options.workorderNumber
+   })
   },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {},
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+   
   },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    })
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
   },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 
 })

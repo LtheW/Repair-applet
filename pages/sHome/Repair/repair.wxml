@@ -2,7 +2,7 @@
 <content-card class="content" name="网络报修">
    
         <l-form name="student" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit">
-            <l-form-item label="宿舍:" name="studentName">
+            <l-form-item label="地点:" name="studentName">
                 <l-input id="studentName" bind:lininput="inputAddress" value="{{dorm}}" hide-label show-row="{{false}}" />
             </l-form-item>
 
@@ -43,3 +43,8 @@
         </l-form>
 </content-card>
 </view>
+
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

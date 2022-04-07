@@ -80,9 +80,6 @@ page {
   margin-right: 20rpx;
 }
 
-.textarea-class {
-  /*width:auto !important;*/
-}
 
 .error-text {
   background: red;

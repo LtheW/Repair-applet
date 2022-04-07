@@ -35,7 +35,7 @@
   width: 50rpx !important;
 }
 .button{
-  margin-top:280rpx;
+  margin-top:200rpx;
   
 }
 .button-container{

@@ -1,7 +1,7 @@
 <view>
   <view class="header-container">
     <view class="avatar-container">
-      <l-avatar src="/images/背景.png" size="180" />
+      <l-avatar src="https://repair.woogugu.cn/images/背景.png" size="180" />
       <view style="margin-top: 10rpx; font-size: 48rpx">莫某某</view>
     </view>
     <view class="header-info-container">

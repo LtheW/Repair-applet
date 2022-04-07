@@ -9,7 +9,7 @@
   
   <view class="boxcard1" bindtap='bindtap'>
   <l-card l-img-class="cardimage" l-class="card" type="primary"
-            image="/images/报修.png"
+            image="{{image}}/images/repair.png"
             title="待维修">
         <!-- 此处为content -->
         <view class="content">
@@ -20,7 +20,7 @@
 
   <view class="boxcard2" bindtap='bindtap1'>
     <l-card l-img-class="cardimage" l-class="card" type="primary"
-            image="/images/报修1.png"
+            image="{{image}}/images/repair1.png"
             title="历史维修">
         <!-- 此处为content -->
         <view class="content">

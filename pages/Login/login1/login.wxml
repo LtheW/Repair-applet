@@ -17,7 +17,7 @@
 
  <view class="container">
  
-  <image src="/images/背景.png" style="width: 500rpx; height: 500rpx; display: inline-block; box-sizing: border-box"></image>
+  <image src="{{image}}images/background.png" style="width: 500rpx; height: 500rpx; display: inline-block; box-sizing: border-box"></image>
  </view>
  <view class="login-container" style="width: 750rpx; height: 550rpx; display: block; box-sizing: border-box">
   <view class="title1">欢迎使用</view>

@@ -7,6 +7,7 @@ Page({
   data: {
     cards: [],
     workState: ['待维修', '维修中', '维修成功'],
+    evaluationStatus:["待评价","已评价"],
     years: [],
     months: [],
     days: [],
@@ -55,9 +56,10 @@ Page({
     })
   },
 
-  test:function () {
+  test:function (e) {
+    console.log(e.currentTarget.dataset.id);
     wx.navigateTo({
-      url: '../sStory/evaluation/evaluation',
+      url: '../sStory/details/details?workorderNumber='+e.currentTarget.dataset.id
     })
   },
   /**

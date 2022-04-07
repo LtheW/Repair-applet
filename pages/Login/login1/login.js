@@ -1,4 +1,5 @@
 // pages/Login/login1/login.js
+const app=getApp();
 Page({
 
   /**
@@ -8,7 +9,8 @@ Page({
     check: false,
     studentInfo: "",
     passWord: "",
-    userinfo:""
+    userinfo:"",
+    image:app.globalData.url
   },
   bindInput: function (e) {
     this.setData({
@@ -63,7 +65,6 @@ Page({
   },
   Login1: function () {
     var that = this;
-    var app = getApp();
     wx.request({
       data: {
         jobnumber: that.data.userinfo,

@@ -1,5 +1,6 @@
 // pages/sHome/Repair/repair.js
 const util = require('../../../utils/util.js')
+const app=getApp();
 Page({
 
   /**
@@ -51,7 +52,7 @@ Page({
       return new Promise((resolve, reject) => {
        
           wx.uploadFile({
-            url: 'https://cn-cd-dx-6.natfrp.cloud:41348/fileUpload',
+            url: app.globalData.url+'fileUpload',
             filePath: encodeURI(that.data.allImage[i]),
             name: 'file',
             formData: {
@@ -83,7 +84,6 @@ Page({
 
   async submit(event) {
     var that = this;
-    var app = getApp();
     var upTime = util.formatTime(new Date());
     
     for (var i = 0; i < that.data.allImage.length; i++) {
@@ -117,10 +117,16 @@ Page({
       },
       method: "POST",
       success: function (res) {
+       
         console.log("提交成功")
         console.log(res);
         if (res.data.code == 200) {
-          wx.navigateBack();
+          wx.lin.showMessage({
+            type: 'success',
+            duration: 1500,
+            content: '提交成功'
+          });
+          //wx.navigateBack();
         }
       }
     })

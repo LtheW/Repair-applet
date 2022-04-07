@@ -1,10 +1,10 @@
-<view wx:for="{{cards}}" wx:for-item="item" wx:key="key">
+<view wx:for="{{cards}}" wx:for-item="item" wx:key="key" >
 <l-card type="primary" l-class="card" plaintext="{{true}}">
         <!-- 此处为content -->
         <view class="avter-container">
         <view class="date">{{years[index]}}年{{months[index]}}月{{days[index]}}日</view>
         <view class="number">{{weeks[weekdays[index]-1]}} {{times[index]}}</view>
-        <view class="number1">待评价</view>
+        <view class="number1">{{evaluationStatus[item.evaluationStatus-1]}}</view>
         </view>
         <view class="line"></view>
         <view class="avter-content">
@@ -15,7 +15,7 @@
          <view class="avter-content">
         进度：{{workState[item.workorderState-1]}}
         </view>
-           <l-button size="mini" bind:lintap="test">前往评价</l-button>
+           <l-button size="mini" bind:lintap="test" data-id="{{item.workorderNumber}}">查看详情</l-button>
         </view>
   </l-card>
 </view>

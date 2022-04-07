@@ -44,9 +44,11 @@ Page({
             url: '../sHome/s-home'
           })
         } else {
-          that.setData({
-            message: "你输入的账号或密码错误，请重新输入"
-          })
+          wx.lin.showMessage({
+            type: 'error',
+            duration: 1500,
+            content: '错误提示'
+          });
         }
       }
     })
